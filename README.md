@@ -21,7 +21,7 @@
  * js 数据层
  * @author fengjiabao
  * @link:  https://github.com/fengjiabao/mapService
- * @version 1.0.3
+ * @version 1.0.5
  */
 import mapService from 'mapservice' //   or   var  mapService = require("mapservice") 
 
@@ -66,6 +66,16 @@ mapService.DataStore.keys()
 //get store size
 mapService.DataStore.size()
 ```
+ ##### Data persistence, when pages refresh, such as vue-router refresh
+
+ ```javascript
+//before refresh
+mapService.DataStore.setSessionJson(key,obj)
+
+//after refresh
+mapService.DataStore.getSessionJson(key,obj)
+ ```
+
  #### 2.  dataService
 **Complete inter-component communication and data transfer**
  ##### eg1:
